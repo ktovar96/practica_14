@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Person: <%= ID %></h1> <!-- Comprueba que lleguen bien el parametro ID -->   
+        <h2>Message: <%= MESS %></h2> <!-- Comprueba que lleguen bien el parametro MESS -->   
+        <h3>Times: <%= TIMES %></h3> <!-- Comprueba que lleguen bien el parametro TIMES -->   
+
+        <%switch(MESS){ <!-- Se evaluará el parametro "MESS" -->   
+            case "Bienvenido":%> <!-- En caso de que MESS sea igual a "Bienveido" se hará lo siguiente -->   
+            <ul><!--Abre una lista desordenada -->   
+            <%for(let i = 0; i < TIMES; i++){%> <!-- Se declara un for que se ejecute el numero de veces de "TIMES" -->  
+                <li>Bienvenido <%=ID%></li> <!-- Se imprime una lista con el mensaje "Bienvenido" + ID el numero de veces de "TIMES" -->  
+            <%}%>
+            <%break%>
+            </ul><!--Cierra la etiqueta para la lista desordenada...-->
+            <%case "Hola":%> <!-- En caso de que MESS sea igual a "Hola" se hará lo siguiente --> 
+            <ul><!--Abre una lista desordenada -->   
+            <%for(let i = 0; i < TIMES; i++){%> <!-- Se declara un for que se ejecute el numero de veces de "TIMES" -->  
+                <li>Hola <%=ID%></li> <!-- Se imprime una lista con el mensaje "Hola" + ID el numero de veces de "TIMES" -->  
+            <%}%>
+            <%break%>
+            </ul><!--Abre una lista desordenada -->   
+            <%case "Adios":%>  <!-- En caso de que MESS sea igual a "Adios" se hará lo siguiente --> 
+            <ul><!--Cierra la etiqueta para la lista desordenada...-->
+            <%for(let i = 0; i < TIMES; i++){%> <!-- Se declara un for que se ejecute el numero de veces de "TIMES" -->  
+                <li>Adios <%=ID%></li> <!-- Se imprime una lista con el mensaje "Adios" + ID el numero de veces de "TIMES" -->  
+            <%}%>
+            <%break%>
+            </ul><!--Cierra la etiqueta para la lista desordenada...-->
+        <%}%>
+
+        
+    </body>
+    
+</body>
+</html>
